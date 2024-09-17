@@ -12,7 +12,10 @@ public class Book {
     }
     public Book(String argument[]) {
         /* construct the object with an array of chapter names */
-        this.chapters = argument;
+        chapters = new String[argument.length];
+        for (int i = 0; i < chapters.length; i++) {
+            chapters[i] = argument[i];
+        }
 
     }
     public String getChapter(int i) {
